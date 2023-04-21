@@ -1,26 +1,11 @@
 .app-wrapper {
 	display: grid;
-	width: 1200px;
-	margin: 0 auto;
 	grid-template-rows: 60px 1fr;
 	grid-template-columns: 2fr 10fr;
 	grid-gap: 10px;
 	grid-template-areas:
 		"header header "
 		"nav content ";
-}
-.header {
-	grid-area: header;
-	background-color: greenyellow;
-}
-.nav {
-	grid-area: nav;
-	background-color: burlywood;
-}
-.content {
-	grid-area: content;
-	background-color: cadetblue;
-}
-.header img {
-	width: 20px;
+	width: 1200px;
+	margin: 0 auto;
 }

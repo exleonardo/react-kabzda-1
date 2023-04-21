@@ -1,7 +1,8 @@
-import "./Profile.css";
+import MyPosts from "./MyPosts";
+import s from "./Profile.module.css";
 const Profile = () => {
 	return (
-		<div className="content">
+		<div className={s.content}>
 			<div>
 				<img
 					src="https://cdn.tripster.ru/thumbs2/f8b8dd24-c646-11ed-b9bb-b6ff1f9232bb.1220x600.jpeg"
@@ -9,14 +10,7 @@ const Profile = () => {
 				></img>
 			</div>
 			<div>ava + descr</div>
-			<div>
-				My Post
-				<div>new Post</div>
-				<div>
-					<div>post 1</div>
-					<div>post 2</div>
-				</div>
-			</div>
+			<MyPosts />
 		</div>
 	);
 };
