@@ -1,4 +1,4 @@
-// import s from "./ProfileInfo.module.css";
+import s from "./ProfileInfo.module.css";
 
 const ProfileInfo = () => {
 	return (
@@ -9,7 +9,7 @@ const ProfileInfo = () => {
 					alt="content"
 				></img>
 			</div>
-			<div>ava + descr</div>
+			<div className={s.descriptionBlock}>ava + descr</div>
 		</div>
 	);
 };
