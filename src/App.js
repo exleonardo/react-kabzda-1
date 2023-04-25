@@ -36,6 +36,5 @@ function App(props) {
 		</BrowserRouter>
 	);
 }
-// postsData={props.postsData}
-// dialogsData={props.dialogsData} messagesData={props.messagesData}
+
 export default App;
