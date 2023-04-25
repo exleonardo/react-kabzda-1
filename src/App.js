@@ -6,10 +6,6 @@ import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
 
 function App(props) {
-	const postData = [
-		{ id: 1, message: "Hi", likesCount: 12 },
-		{ id: 2, message: "How is your It-camasutra", likesCount: 11 },
-	];
 	return (
 		<BrowserRouter>
 			<div className="app-wrapper">
@@ -17,11 +13,23 @@ function App(props) {
 				<Navbar />
 				<div className="app-wrapper-content">
 					<Routes>
-						<Route path="/profile/*" element={<Profile postsData={postData} />} />
-						<Route path="/dialogs/*" element={<Dialogs />} />
-						<Route path="/news/*" element={<Dialogs />} />
-						<Route path="/music/*" element={<Dialogs />} />
-						<Route path="/setting/*" element={<Dialogs />} />
+						<Route path="/profile/*" element={<Profile postsData={props.postsData} />} />
+						<Route
+							path="/dialogs/*"
+							element={<Dialogs dialogData={props.dialogData} messagesData={props.messagesData} />}
+						/>
+						<Route
+							path="/news/*"
+							element={<Dialogs dialogData={props.dialogData} messagesData={props.messagesData} />}
+						/>
+						<Route
+							path="/music/*"
+							element={<Dialogs dialogData={props.dialogData} messagesData={props.messagesData} />}
+						/>
+						<Route
+							path="/setting/*"
+							element={<Dialogs dialogData={props.dialogData} messagesData={props.messagesData} />}
+						/>
 					</Routes>
 				</div>
 			</div>
