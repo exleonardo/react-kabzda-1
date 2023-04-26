@@ -13,29 +13,41 @@ function App(props) {
 				<Navbar />
 				<div className="app-wrapper-content">
 					<Routes>
-						<Route path="/profile/*" element={<Profile postsData={props.state.postData} />} />
+						<Route path="/profile/*" element={<Profile postsData={props.state.profilePage.postData} />} />
 						<Route
 							path="/dialogs/*"
 							element={
-								<Dialogs dialogData={props.state.dialogData} messagesData={props.state.messagesData} />
+								<Dialogs
+									dialogData={props.state.dialogPage.dialogData}
+									messagesData={props.state.dialogPage.messagesData}
+								/>
 							}
 						/>
 						<Route
 							path="/news/*"
 							element={
-								<Dialogs dialogData={props.state.dialogData} messagesData={props.state.messagesData} />
+								<Dialogs
+									dialogData={props.state.dialogPage.dialogData}
+									messagesData={props.state.dialogPage.messagesData}
+								/>
 							}
 						/>
 						<Route
 							path="/music/*"
 							element={
-								<Dialogs dialogData={props.state.dialogData} messagesData={props.state.messagesData} />
+								<Dialogs
+									dialogData={props.state.dialogPage.dialogData}
+									messagesData={props.state.dialogPage.messagesData}
+								/>
 							}
 						/>
 						<Route
 							path="/setting/*"
 							element={
-								<Dialogs dialogData={props.state.dialogData} messagesData={props.state.messagesData} />
+								<Dialogs
+									dialogData={props.state.dialogPage.dialogData}
+									messagesData={props.state.dialogPage.messagesData}
+								/>
 							}
 						/>
 					</Routes>
