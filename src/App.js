@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
 
 function App(props) {
+	console.log(props);
 	return (
 		<BrowserRouter>
 			<div className="app-wrapper">
@@ -15,7 +16,13 @@ function App(props) {
 					<Routes>
 						<Route
 							path="/profile/*"
-							element={<Profile state={props.state.profilePage} addPost={props.addPost} />}
+							element={
+								<Profile
+									profilePage={props.state.profilePage}
+									addPost={props.addPost}
+									updateNewPostText={props.updateNewPostText}
+								/>
+							}
 						/>
 						<Route path="/dialogs/*" element={<Dialogs state={props.state.dialogPage} />} />
 						<Route path="/news/*" element={<Dialogs state={props.state.dialogPage} />} />
