@@ -6,7 +6,6 @@ import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
 
 function App(props) {
-	console.log(props);
 	return (
 		<BrowserRouter>
 			<div className="app-wrapper">
