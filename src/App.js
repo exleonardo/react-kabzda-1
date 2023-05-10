@@ -35,3 +35,11 @@ function App(props) {
 }
 
 export default App;
+
+let lol = [
+	[3, 2, 3],
+	[1, 6, 3, 5],
+	[3, 13, 26, 6, 8],
+	[19, 3, 9],
+];
+console.log(lol[1][0].lengt);
