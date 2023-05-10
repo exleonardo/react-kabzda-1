@@ -9,26 +9,16 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 let renderEntireTree = (state) => {
 	root.render(
 		<React.StrictMode>
-			<App state={store.getState()} addPost={store.addPost} updateNewPostText={store.updateNewPostText} />
+			<App
+				state={store.getState()}
+				addPost={store.addPost.bind(store)}
+				updateNewPostText={store.updateNewPostText.bind(store)}
+			/>
 		</React.StrictMode>
 	);
 };
-// @LusiaLilExplorer
-// 5 месяцев назад
-// Ноябрь 2022
-// в 18й версии надо менять в index.js
-// ReactDOM.render (
-// на
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(
-
-// Так же убрать из app.js врап
-//     BrowserRouter
 
 renderEntireTree(store.getState());
 store.subscribe(renderEntireTree);
 
 // renderEntireTree();
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

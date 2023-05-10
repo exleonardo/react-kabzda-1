@@ -32,11 +32,11 @@ let store = {
 	addPost(postMessage) {
 		let newPost = { id: 5, message: postMessage, likesCount: 0 };
 		this._state.profilePage.postData.push(newPost);
-		this._callSubscriber();
+		this._callSubscriber(this._state);
 	},
 	updateNewPostText(newText) {
 		this._state.profilePage.newPostText = newText;
-		this._callSubscriber();
+		this._callSubscriber(this._state);
 	},
 	subscribe(observer) {
 		this._callSubscriber = observer;
