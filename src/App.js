@@ -15,13 +15,7 @@ function App(props) {
 					<Routes>
 						<Route
 							path="/profile/*"
-							element={
-								<Profile
-									profilePage={props.state.profilePage}
-									addPost={props.addPost}
-									updateNewPostText={props.updateNewPostText}
-								/>
-							}
+							element={<Profile profilePage={props.state.profilePage} dispatch={props.dispatch} />}
 						/>
 						<Route path="/dialogs/*" element={<Dialogs state={props.state.dialogPage} />} />
 						<Route path="/news/*" element={<Dialogs state={props.state.dialogPage} />} />
@@ -35,11 +29,3 @@ function App(props) {
 }
 
 export default App;
-
-let lol = [
-	[3, 2, 3],
-	[1, 6, 3, 5],
-	[3, 13, 26, 6, 8],
-	[19, 3, 9],
-];
-console.log(lol[1][0].lengt);
