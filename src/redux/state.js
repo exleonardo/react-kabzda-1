@@ -23,6 +23,7 @@ let store = {
 				{ name: `Victor`, id: 4 },
 				{ name: `Valeryi`, id: 5 },
 			],
+			newMessageBody: "",
 		},
 		sidebar: {},
 	},
