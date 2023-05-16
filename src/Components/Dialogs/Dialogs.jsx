@@ -4,12 +4,11 @@ import DialogItem from "./DialogItem/DialogItem";
 import { sendMessageCreater, updateNewMessageBodyCreator } from "../../redux/state";
 
 const Dialogs = (props) => {
-	const messagesElement = props.state.messagesData.map((message) => <Message message={message.message} />);
-	const dialogsElement = props.state.dialogData.map((dialog) => (
-		<DialogItem name={dialog.name} id={dialog.id} />
-	));
+	let state = props.store.getState().dialogPage;
+	const messagesElement = state.messagesData.map((message) => <Message message={message.message} />);
+	const dialogsElement = state.dialogData.map((dialog) => <DialogItem name={dialog.name} id={dialog.id} />);
 
-	let newMessageBody = props.state.newMessageBody;
+	let newMessageBody = state.newMessageBody;
 	let onNewMessageChange = (e) => {
 		let body = e.target.value;
 		props.store.dispatch(updateNewMessageBodyCreator(body));
